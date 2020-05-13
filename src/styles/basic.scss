@@ -1,0 +1,152 @@
+*{
+    list-style: none;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto',-apple-system, system-ui,sans-serif;
+    margin: 0;
+    padding: 0;
+    color:white;
+    transition: 0.2s;
+
+}
+/*input*/
+.field{
+    font-size: 14px;
+    background: #1e1e1e;
+    color: #ffffff;
+    border: 2px #1e1e1e solid;
+    border-bottom: 2px #2c2c2c solid;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 8px 12px;
+    transition: border 0.3s ease-in;
+    &:focus{
+        border:2px solid #2c2c2c;
+    }
+    width: 100%;
+}
+
+.button{
+    border-radius: 5px;
+    border: 2px solid #2c2c2c;
+    padding: 10px 20px;
+    color:white;
+    background: #1e1e1e;
+    cursor: pointer;
+
+    &:hover{
+        background: #2c2c2c;
+    }
+    &:active{
+        background: #333333;
+    }
+    &--red{
+
+        &:hover{
+            background: darken(#ff464b,1%);
+        }
+        &:active{
+            background: darken(#ff464b,10%);
+        }
+    }
+    &--green{
+        &:hover{
+            background: darken(#1dff83,1%);
+        }
+        &:active{
+            background: darken(#1dff83,10%);
+        }
+    }
+    &:disabled{
+        opacity: 0.5;
+    }
+}
+
+.svg{
+    width: 18px;
+    height:18px;
+}
+input,button{
+    color:black;
+}
+/*main window*/
+.window{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+/*menu block*/
+/*
+.menu_block{
+    width: 100%;
+    padding: 0;
+}
+.menu_list{
+    display: flex;
+    justify-content: flex-end;
+   list-style: none;
+    padding: 5px 20px;
+    background: #1e1e1e;
+
+}
+.menu_item{
+    padding: 0;
+    color: white;
+    transition: 0.2s;
+}
+.menu_item a{
+    color: white;
+    padding: 0 20px;
+}
+.menu_item:hover{
+    background: #333333;
+}
+*/
+
+/*footer*/
+.footer{
+
+    width: 100%;
+    padding: 5px 0;
+    display: flex;
+    background: #1e1e1e;
+    align-items: center;
+    height: 6%;
+}
+
+.footer li{
+    list-style: none;
+}
+
+.footer_about{
+    width: 40%;
+}
+.footer_list{
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+
+}
+.footer_list_item{
+    padding: 8px 10px;
+    width: 20%;
+    text-align: center;
+    transition: 0.2s;
+}
+.footer_list_item:hover{
+    background: #333333;
+}
+.footer_contacts{
+    width:40%;
+}
+.footer_developers{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_developers p{
+    text-align: center;
+}
