@@ -2,12 +2,12 @@
   "lists": [
     {
       "id": 2,
-      "name": "Фронтенд",
+      "name": "Full",
       "colorId": 4
     },
     {
       "id": 3,
-      "name": "Фильмы и сериалы",
+      "name": "New list",
       "colorId": 3
     },
     {
@@ -16,13 +16,13 @@
       "id": 7
     },
     {
-      "name": "SS",
+      "name": "Games",
       "colorId": 6,
       "id": 8
     },
     {
-      "name": "asd",
-      "colorId": 5,
+      "name": "Фильмы и ",
+      "colorId": 8,
       "id": 9
     }
   ],
@@ -30,43 +30,31 @@
     {
       "id": 1,
       "listId": 2,
-      "text": "Изучить JavaScript",
+      "text": "Task 1",
       "completed": true
     },
     {
       "id": 2,
       "listId": 2,
-      "text": "Изучить паттерны проектирования",
+      "text": "Node JS + Express",
       "completed": false
-    },
-    {
-      "id": 3,
-      "listId": 2,
-      "text": "ReactJS Hooks (useState, useReducer, useEffect и т.д.)",
-      "completed": true
     },
     {
       "id": 4,
       "listId": 2,
       "text": "Redux (redux-observable, redux-saga)",
-      "completed": true
+      "completed": false
     },
     {
       "listId": 2,
-      "text": "123",
-      "completed": true,
-      "id": 5
-    },
-    {
-      "listId": 2,
-      "text": "222",
+      "text": "JS",
       "completed": true,
       "id": 12
     },
     {
       "listId": 3,
       "text": "Back to the stable version III",
-      "completed": false,
+      "completed": true,
       "id": 24
     },
     {
@@ -74,6 +62,54 @@
       "text": "Test",
       "completed": true,
       "id": 25
+    },
+    {
+      "listId": 2,
+      "text": "HTML+CSS",
+      "completed": true,
+      "id": 26
+    },
+    {
+      "listId": 8,
+      "text": "1) Far Cry 3 Blood Dragon",
+      "completed": true,
+      "id": 27
+    },
+    {
+      "listId": 8,
+      "text": "2) Minecraft",
+      "completed": true,
+      "id": 28
+    },
+    {
+      "listId": 8,
+      "text": "3) Bulletstorm",
+      "completed": true,
+      "id": 29
+    },
+    {
+      "listId": 8,
+      "text": "4) Doom 2016",
+      "completed": false,
+      "id": 30
+    },
+    {
+      "listId": 2,
+      "text": "SCSS",
+      "completed": true,
+      "id": 31
+    },
+    {
+      "listId": 9,
+      "text": "ssasdasd",
+      "completed": false,
+      "id": 32
+    },
+    {
+      "listId": 9,
+      "text": "asd",
+      "completed": false,
+      "id": 33
     }
   ],
   "colors": [

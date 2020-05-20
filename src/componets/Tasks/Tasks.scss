@@ -1,20 +1,24 @@
 .tasks{
-
-
-
+  &:last-child{
+    margin-bottom: 50px;
+  }
   &:not(:last-of-type){
     margin-bottom: 40px;
   }
   &__title{
-    font-family: Montserrat;
-    font-style:normal;
-    font-weight: bold;
-    font-size: 32px;
-    line-height: 39px;
     border-bottom: 1px solid #fff;
     padding-bottom: 20px;
     &:hover{
       img{opacity:0.2}
+    }
+    input{
+      font-family: Montserrat;
+      font-style:normal;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 39px;
+      background: none;
+      border: none;
     }
   }
   img{
@@ -127,9 +131,20 @@
         height: 20px;
         margin: 0;
       }
-      p{
+      textarea{
+        overflow: auto;
         margin-left: 15px;
+        width: 90%;
+        outline: none;
+        border: none;
+        background: #333333;
+        color:white;
+        padding: 5px;
+        font-size: 15px;
+        height: 80px;
+        resize: none;
       }
+
       &:hover &-actions {
         opacity: 1;
       }
@@ -175,5 +190,24 @@
 
       }
     }
+  }
+}
+@media screen and (max-width: 600px) {
+  .tasks{
+    &__title{
+      input{
+        width: 90%;
+      }
+      img{
+        margin-left: 0;
+      }
+    }
+
+  }
+  .tasks__items-row textarea{
+
+        height: 100px;
+        overflow: auto;
+
   }
 }

@@ -1,3 +1,6 @@
+body{
+    background: #2c2c2c;
+}
 *{
     list-style: none;
     outline: none;
@@ -10,6 +13,8 @@
     transition: 0.2s;
 
 }
+
+
 /*input*/
 .field{
     font-size: 14px;
@@ -72,48 +77,17 @@ input,button{
 }
 /*main window*/
 .window{
-    display: flex;
-    flex-wrap: wrap;
     height: 100vh;
 }
 
-/*menu block*/
-/*
-.menu_block{
-    width: 100%;
-    padding: 0;
-}
-.menu_list{
-    display: flex;
-    justify-content: flex-end;
-   list-style: none;
-    padding: 5px 20px;
-    background: #1e1e1e;
-
-}
-.menu_item{
-    padding: 0;
-    color: white;
-    transition: 0.2s;
-}
-.menu_item a{
-    color: white;
-    padding: 0 20px;
-}
-.menu_item:hover{
-    background: #333333;
-}
-*/
-
 /*footer*/
 .footer{
-
     width: 100%;
     padding: 5px 0;
     display: flex;
     background: #1e1e1e;
     align-items: center;
-    height: 6%;
+    height: 6%;//media
 }
 
 .footer li{
@@ -150,3 +124,7 @@ input,button{
 .footer_developers p{
     text-align: center;
 }
+
+
+//adaptation
+

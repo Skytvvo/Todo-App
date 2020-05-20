@@ -1,0 +1,66 @@
+.alert{
+  position: absolute;
+  background: #2c2c2c;
+  border: 20px solid #333333;
+  border-radius: 20px;
+  height: 80%;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  display: flex;
+
+  transform: translate(-50%, -50%);
+  &__close{
+
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    width: 90%;
+  }
+  &__avatar{
+
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img{
+      border-radius: 20px;
+      width: 50%;
+      margin-top: 20px;
+    }
+    button{
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
+      width: 120px;
+      &:hover{
+        background: #ff0800;
+        color: #ffffff;
+        box-shadow: 0 0 15px 0 #ff0800;
+      }
+      &:active{
+        color: #000000;
+        background: #ffffff;
+        box-shadow: 0 0 15px 0 #ffffff;
+      }
+    }
+  }
+  &__contact{
+    width: 70%;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    span{
+      cursor: pointer;
+      margin-top: 20px;
+      width: 50%;
+      background: #333333;
+      padding: 10px;
+      &:hover{
+        background: #1e1e1e;
+      }
+    }
+  }
+}

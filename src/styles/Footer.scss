@@ -1,0 +1,25 @@
+.footer{
+
+
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  &__btn{
+    width: 20ch;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: #333333 solid 2px;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover{
+      background: #333333;
+    }
+    &:active{
+      background: #2c2c2c;
+    }
+  }
+}
+

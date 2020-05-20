@@ -1,23 +1,22 @@
-import React,{Component} from "react";
+import React from "react";
 import './styles/basic.scss';
 import  Footer from  "./componets/Footer";
 import Navigation from "./componets/TaskNavigationList";
-
+import Alert from "./componets/Alert";
+import {Route} from "react-router-dom";
 import "./styles/NavigatorStyle.scss"
-class App extends Component{
 
+export default () => {
+    return (
 
-    render() {
+        <div className="window">
+            <Navigation/>
+            <Route exact path="/about">
+            <Alert/>
+            </Route>
+            <Footer/>
 
-        return(
-
-            <div className="window">
-
-                <Navigation />
-                <Footer/>
-            </div>
-        );
-    }
-
+        </div>
+    )
 }
-export default App
+

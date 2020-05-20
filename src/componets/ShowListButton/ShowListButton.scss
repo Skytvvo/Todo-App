@@ -1,0 +1,35 @@
+.showListButton{
+  display: block;
+  width: 20%;
+  position: absolute;
+  img{
+    margin: 10px;
+    padding: 5px;
+    width: 30px;
+    left: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 3px solid #333333;
+    &:hover{
+      background: #333333;
+    }
+    &:active{
+      background: #2c2c2c;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .showListButton{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    img{
+      transform: rotate(90deg);
+
+
+    }
+
+
+  }
+}

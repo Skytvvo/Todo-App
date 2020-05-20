@@ -3,8 +3,9 @@ import listSvg from "./userInterface/035-menu.svg";
 import {List,AddListButton,Tasks} from "./index.jsx";
 import axios from "axios";
 import {Route,useHistory} from "react-router-dom";
+import ShowListButton from "./ShowListButton";
 
-function Navigation() {
+const Navigation=()=> {
 
     const[lists,setLists]=useState(null);
     const [colors,setColors]=useState(null);
@@ -14,6 +15,7 @@ function Navigation() {
 
     useEffect(()=>{
         axios.get('http://localhost:3004/lists?_expand=color&_embed=tasks').then(({data})=>{
+
             setLists(data);
         });
         axios.get('http://localhost:3004/colors').then(({data})=>{
@@ -82,24 +84,25 @@ function Navigation() {
         });
     };
 
-    const onEditTask=(listId,taskObj)=>{
-      const newTaskText = window.prompt("Enter text of task:",taskObj.text);
-      if(!newTaskText)
+    const onEditTask=(listId,id,text)=>{
+      if(!text)
           return;
+        console.log("ok",text);
         const newList = lists.map(list=>{
             if(list.id === listId){
                 list.tasks=list.tasks.map(task=>{
-                    if(task.id === taskObj.id){
-                        task.text=newTaskText;
+                    if(task.id === id){
+                        task.text=text;
                     }
                     return task;
                 })
             }
             return list;
         });
+
         setLists(newList);
-        axios.patch(`http://localhost:3004/tasks/${taskObj.id}`,{
-            text:newTaskText
+        axios.patch(`http://localhost:3004/tasks/${id}`,{
+            text
         }).catch(()=>{
             alert("Something went wrong...");
         });
@@ -118,7 +121,9 @@ function Navigation() {
 return(
 
   <div className="todo" >
+      <ShowListButton/>
       <div className="todo__sidebar">
+
         <List
             onClickItem={list=>{
                 history.push(`/`)
@@ -184,6 +189,6 @@ return(
       </div>
   </div>
 );
-}
+};
 
 export default Navigation
