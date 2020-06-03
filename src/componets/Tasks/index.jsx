@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import axios from "axios";
 import {Link} from "react-router-dom";
 import "./Tasks.scss";
@@ -16,12 +16,15 @@ const Tasks=(
         onCompleteTask
     })=>{
 
-    const [taskTitle,setTaskTitle] = useState(null);
+    const [taskTitle,setTaskTitle] = useState(list.name);
 
     const titleHandler =(e)=>{
         setTaskTitle(e.target.value);
     };
 
+    useEffect(()=>{
+        setTaskTitle(list.name)
+    },[list.name]);
     const onEdit=()=>{
       if(taskTitle){
           onEditTitle(list.id,taskTitle);
@@ -38,7 +41,7 @@ const Tasks=(
            <Link to={`/lists/${list.id}`}>
                <span className="tasks__title">
                    <input style={{color:list.color.hex}} onChange={titleHandler}
-                          value={(taskTitle!==null)?taskTitle:list.name}/>
+                          value={(taskTitle)}/>
                    <img onClick={onEdit} src={SaveSVG}  alt="Edit header"/>
                </span>
            </Link>

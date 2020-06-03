@@ -5,7 +5,7 @@ const Task=({id,text,onRemove,onEdit,list,onComplete,completed})=>{
     const [taskText,setTaskText] = useState(text);
 
     const onChangeTask= e =>{
-      setTaskText(e.target.value)
+      setTaskText(e.target.value);
     };
     const onChangeCheckbox = e =>{
         onComplete(list.id,id,e.target.checked);
